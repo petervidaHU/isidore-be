@@ -3,16 +3,7 @@ import { Injectable, InternalServerErrorException } from '@nestjs/common';
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
 import { CreateOfferingDto } from '../dto/create-offering.dto';
 import { HuggingFaceAPI } from '../llm/huggingfaceApi';
-
-interface Offering {
-  id: number;
-  name: string;
-}
-
-export interface OfferingResponse {
-  id: string;
-  advised: string | null;
-}
+import { Offering, OfferingResponse } from './offering.types';
 
 @Injectable()
 export class OfferingService {

@@ -1,6 +1,7 @@
 import { Body, Controller, Delete, Get, Post } from '@nestjs/common';
-import { OfferingResponse, OfferingService } from './offering.service';
 import { CreateOfferingDto } from 'src/dto/create-offering.dto';
+import { OfferingResponse } from './offering.types';
+import { OfferingService } from './offering.service';
 
 @Controller('offering')
 export class OfferingController {
