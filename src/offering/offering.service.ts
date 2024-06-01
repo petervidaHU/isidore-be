@@ -76,8 +76,6 @@ export class OfferingService {
       advise = adviseResult.advise;
     }
 
-    console.log('advise', advise);
-
     return {
       id: data[0].id,
       advised: advise,

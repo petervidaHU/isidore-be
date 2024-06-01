@@ -54,8 +54,6 @@ export class HuggingFaceAPI {
         max_tokens: 300
       });
 
-      console.log('ssss',  out.choices[0].message)
-
       return {
         status: 'ok',
         result: {
