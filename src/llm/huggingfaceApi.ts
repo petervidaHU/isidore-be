@@ -54,10 +54,12 @@ export class HuggingFaceAPI {
         max_tokens: 300
       });
 
+      console.log('ssss',  out.choices[0].message)
+
       return {
         status: 'ok',
         result: {
-          advise: out.choices[0].message.content.split('\n').slice(1).join('\n'),
+          advise: out.choices[0].message.content.split('\n').slice(1).join('\n') || out.choices[0].message.content || 'Good luck!',
         }
       }
     } catch (error) {
